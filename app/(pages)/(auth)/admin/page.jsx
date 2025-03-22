@@ -26,7 +26,6 @@ const AdminPage = () => {
         } else {
           push("/admin/profile");
           toast.success("Login Success");
-          actions.resetForm();
         }
       } catch (error) {
         toast.error("Login Failed");

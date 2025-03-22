@@ -18,7 +18,6 @@ const AdminProfile = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isProduct, setIsProduct] = useState(false);
-  const { data: session, status } = useSession();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,16 +39,6 @@ const AdminProfile = () => {
     };
     fetchData();
   }, []);
-
-  if (!session?.user || status === "unauthenticated") {
-    return (
-      <div className="container mx-auto">
-        <div className="min-h-[calc(100vh_-_433px)] grid place-content-center">
-          <Title addClass="text-[40px]">Admin not looged in </Title>
-        </div>
-      </div>
-    );
-  }
 
   if (loading) {
     return (

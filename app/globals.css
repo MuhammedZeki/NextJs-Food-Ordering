@@ -14,14 +14,18 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+.slick-dots{
+  @apply flex justify-start items-center 
+}
+.slick-dots .slick-active div{
+  @apply bg-primary border-none  scale-150
+}
+

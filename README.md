@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍽️ Next.js Food Ordering
 
-## Getting Started
+Bu proje, modern web teknolojileri kullanılarak geliştirilmiş bir çevrimiçi yemek siparişi platformudur. 
+Kullanıcılar, çeşitli yemekleri görüntüleyebilir, sepetlerine ekleyebilir ve sipariş verebilirler. 
+Ayrıca yöneticiler için özel bir admin paneli de bulunmaktadır.
 
-First, run the development server:
+🔗 [GitHub Projesi](https://github.com/MuhammedZeki/NextJs-Food-Ordering)
+
+---
+
+## 📑 İçindekiler
+
+- [Özellikler](#özellikler)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [Admin Paneli Girişi](#admin-paneli-girişi)
+- [Geliştirici](#geliştirici)
+
+---
+
+## ✨ Özellikler
+
+- Yemekleri listeleme ve detaylarını görüntüleme
+- Sepete ürün ekleme / çıkarma
+- Sipariş tamamlama adımı
+- Admin panel üzerinden ürün yönetimi (ekleme, silme, güncelleme)
+- Mobil uyumlu responsive tasarım
+
+---
+
+## 🧰 Kullanılan Teknolojiler
+
+- [Next.js](https://nextjs.org/) – React tabanlı framework
+- [MongoDB + Mongoose](https://mongoosejs.com/) – Veritabanı ve ODM
+- [Tailwind CSS](https://tailwindcss.com/) – Hızlı UI geliştirme için
+- [NextAuth veya özel auth sistemi] – Kullanıcı ve admin kimlik doğrulama
+- [Redux Toolkit] – Global state yönetimi
+
+---
+
+## ⚙️ Kurulum
+
+1. Bu repoyu klonlayın:
+
+```bash
+git clone https://github.com/MuhammedZeki/NextJs-Food-Ordering.git
+cd NextJs-Food-Ordering
+```
+
+2. Gerekli paketleri yükleyin:
+
+```bash
+npm install
+```
+
+3. Ortam değişkenlerini `.env.local` dosyasında tanımlayın (örnek dosya içinde olabilir):
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_secret
+```
+
+4. Uygulamayı başlatın:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧪 Kullanım
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Ana sayfada yemek menülerine göz atabilirsiniz.
+- Beğendiğiniz yemekleri sepete ekleyerek sipariş sürecini başlatabilirsiniz.
+- Sipariş sırasında teslimat bilgilerini girip ödeme adımına geçersiniz (demo ödeme olabilir).
+- Sipariş sonrası sipariş geçmişi görüntülenebilir (kullanıcı hesabı mevcutsa).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔐 Admin Paneli Girişi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Admin paneline erişmek için:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+📍 `http://localhost:3000/admin`  
+🧑 **Kullanıcı Adı:** `admin`  
+🔑 **Şifre:** `admin`
 
-## Deploy on Vercel
+> ⚠️ Bu bilgiler sadece geliştirme ortamı içindir. Üretime geçerken güvenlik için mutlaka değiştirin!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 👨‍💻 Geliştirici
+
+**Muhammed Zeki**  
+🔗 [GitHub Profilim](https://github.com/MuhammedZeki)

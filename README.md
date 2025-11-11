@@ -1,10 +1,10 @@
-# 🍽️ Next.js Food Ordering
+# Note-taking-App 
 
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiş bir çevrimiçi yemek siparişi platformudur. 
-Kullanıcılar, çeşitli yemekleri görüntüleyebilir, sepetlerine ekleyebilir ve sipariş verebilirler. 
-Ayrıca yöneticiler için özel bir admin paneli de bulunmaktadır.
+Personal note-taking app built with **React**, **Tailwind CSS**, and **Firebase Auth**.  
+Features include **user registration, login, password reset, and private note management**.  
+Utilizes modern JavaScript (**ES6+**), **React Hook Form**, and **TanStack Query/Mutation hooks** for efficient state and data handling.
 
-🔗 [GitHub Projesi](https://github.com/MuhammedZeki/NextJs-Food-Ordering)
+🔗 [GitHub Projesi](https://github.com/MuhammedZeki/Note-taking-App)
 
 ---
 
@@ -14,28 +14,38 @@ Ayrıca yöneticiler için özel bir admin paneli de bulunmaktadır.
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Kurulum](#kurulum)
 - [Kullanım](#kullanım)
+- [Kullanıcı Yönetimi](#kullanıcı-yönetimi)
+  - [Kayıt Ol](#kayıt-ol)
+  - [Giriş Yap](#giriş-yap)
+  - [Şifre Sıfırlama](#şifre-sıfırlama)
 - [Admin Paneli Girişi](#admin-paneli-girişi)
 - [Geliştirici](#geliştirici)
 
 ---
 
-## ✨ Özellikler
+## ✨ Features
 
-- Yemekleri listeleme ve detaylarını görüntüleme
-- Sepete ürün ekleme / çıkarma
-- Sipariş tamamlama adımı
-- Admin panel üzerinden ürün yönetimi (ekleme, silme, güncelleme)
-- Mobil uyumlu responsive tasarım
+- User registration and login (Firebase Auth)
+- Password reset / Forgot password functionality
+- Add, edit, and delete personal notes
+- User-specific notes (each user can only see their own notes)
+- Form handling and validation using React Hook Form
+- State and data management with TanStack Query / Mutation hooks
+- Responsive design for mobile and desktop (Tailwind CSS)
+- Built with modern JavaScript (ES6+)
+
 
 ---
 
-## 🧰 Kullanılan Teknolojiler
+## 🧰 Technologies Used
 
-- [Next.js](https://nextjs.org/) – React tabanlı framework
-- [MongoDB + Mongoose](https://mongoosejs.com/) – Veritabanı ve ODM
-- [Tailwind CSS](https://tailwindcss.com/) – Hızlı UI geliştirme için
-- [NextAuth veya özel auth sistemi] – Kullanıcı ve admin kimlik doğrulama
-- [Redux Toolkit] – Global state yönetimi
+- [React](https://reactjs.org/) – Frontend library for building UI
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development
+- [Firebase Authentication](https://firebase.google.com/docs/auth) – User authentication (email/password, password reset)
+- [React Hook Form](https://react-hook-form.com/) – Form handling and validation
+- [TanStack Query / Mutation](https://tanstack.com/query/latest) – Efficient state and data management
+- Modern JavaScript (ES6+) – Clean and modular coding
+
 
 ---
 
@@ -44,8 +54,8 @@ Ayrıca yöneticiler için özel bir admin paneli de bulunmaktadır.
 1. Bu repoyu klonlayın:
 
 ```bash
-git clone https://github.com/MuhammedZeki/NextJs-Food-Ordering.git
-cd NextJs-Food-Ordering
+git clone https://github.com/MuhammedZeki/Note-taking-App.git
+cd Note-taking-App
 ```
 
 2. Gerekli paketleri yükleyin:
@@ -54,12 +64,17 @@ cd NextJs-Food-Ordering
 npm install
 ```
 
-3. Ortam değişkenlerini `.env.local` dosyasında tanımlayın (örnek dosya içinde olabilir):
+3. Define environment variables in a `.env.local` file (example file can be provided):
 
 ```env
-MONGODB_URI=your_mongodb_connection_string
-NEXTAUTH_SECRET=your_secret
-```
+# Firebase configuration
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
 
 4. Uygulamayı başlatın:
 
@@ -69,25 +84,26 @@ npm run dev
 
 ---
 
-## 🧪 Kullanım
+## 🧪 Usage
 
-- Ana sayfada yemek menülerine göz atabilirsiniz.
-- Beğendiğiniz yemekleri sepete ekleyerek sipariş sürecini başlatabilirsiniz.
-- Sipariş sırasında teslimat bilgilerini girip ödeme adımına geçersiniz (demo ödeme olabilir).
-- Sipariş sonrası sipariş geçmişi görüntülenebilir (kullanıcı hesabı mevcutsa).
+- On the main page, view your personal notes.
+- Add new notes, edit existing ones, or delete notes you no longer need.
+- Each user can only see their own notes after logging in.
+- Use the password reset feature if you forget your password.
+- Changes are updated in real-time and synced with Firebase.
+
 
 ---
 
-## 🔐 Admin Paneli Girişi
+## 🔐 Admin Panel Login
 
-Admin paneline erişmek için:
+To access the admin panel:
 
-📍 `http://localhost:3000/admin`  
-🧑 **Kullanıcı Adı:** `admin`  
-🔑 **Şifre:** `admin`
+📍 `http://localhost:5173/sign-in`  
+🧑 **Email:** `info@noteapp.com.tr`  
+🔑 **Password:** `Info123$`
 
-> ⚠️ Bu bilgiler sadece geliştirme ortamı içindir. Üretime geçerken güvenlik için mutlaka değiştirin!
-
+> ⚠️ These credentials are for development purposes only. Make sure to change them in production for security!
 ---
 
 ## 👨‍💻 Geliştirici
